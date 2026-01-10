@@ -650,7 +650,7 @@ class UnifiedAnyRouterChecker {
 
 				// 账号之间添加延迟，避免频繁操作触发限制
 				if (i < this.accounts.length - 1) {
-					const delay = minDelay * 1000 + Math.random() * (maxDelay - minDelay) * 1000;
+					const delay = minDelay * 1000 + Math.random() * (10 - minDelay) * 1000;
 					console.log(`[等待] 等待 ${(delay / 1000).toFixed(1)} 秒后处理下一个账号...`);
 					await new Promise((resolve) => setTimeout(resolve, delay));
 				}
